@@ -1,0 +1,25 @@
+{
+  "name": "samplebuilder",
+  "version": "1.1.1",
+  "description": "devpack for electronbuilder sample",
+  "main": "index.js",
+  "author": "devsb",
+  "license": "MIT",
+  "scripts":{
+    "start":"electron ./app --enable-logging",
+    "dev":"NODE_ENV='development' npm run start",
+    "dist":"build --mac --x64"
+  },
+  "build": {
+    "appId": "com.test.samplebuilder",
+    "asar": false,
+    "electronVersion":"0.37.8",
+    "mac": {
+      "category": "public.app-category.business"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^18.6.2",
+    "electron-prebuilt": "^0.37.8"
+  }
+}
